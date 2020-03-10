@@ -23,18 +23,18 @@ const IndexScreen = ({ navigation }) => {
         renderItem={({ item }) => {
           return (
             <TouchableOpacity onPress={() => navigation.navigate('Show')}>
-            <View style={style.row}>
-              <Text style={style.title}>
-                {item.title}-{item.id}
-              </Text>
-              <TouchableOpacity
-                onPress={() => {
-                  deleteBlogPost(item.id);
-                }}
-              >
-                <Feather name="trash" style={style.icon} />
-              </TouchableOpacity>
-            </View>
+              <View style={style.row}>
+                <Text style={style.title}>
+                  {item.title}-{item.id}
+                </Text>
+                <TouchableOpacity
+                  onPress={() => {
+                    deleteBlogPost(item.id);
+                  }}
+                >
+                  <Feather name="trash" style={style.icon} />
+                </TouchableOpacity>
+              </View>
             </TouchableOpacity>
           );
         }}
